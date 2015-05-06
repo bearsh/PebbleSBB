@@ -1,8 +1,7 @@
 Pebble.addEventListener("ready",
     function(e) {
-       	navigator.geolocation.getCurrentPosition(geoSuccess);
-       	
-       	Pebble.addEventListener("appmessage",
+		navigator.geolocation.getCurrentPosition(geoSuccess);
+		Pebble.addEventListener("appmessage",
 			function(e) {
 				var msg = e.payload['dummy'];
 				var parts = msg.split(';');
@@ -34,7 +33,7 @@ function getStations(lat, long) {
 				var count = Math.min(response.stations.length, 8);
 				var hashtable = {};
 				hashtable[0] = count;
-				for (i = 0; i < count; i++) {
+				for (var i = 0; i < count; i++) {
 					var stationName = response.stations[i].name;
 					_stations[i] = response.stations[i].id;
 					hashtable[i+1] = stationName;
@@ -42,7 +41,7 @@ function getStations(lat, long) {
 				Pebble.sendAppMessage(hashtable);	
 			}
 		}
-	}
+	};
 	req.send(null);	
 }
 
@@ -58,7 +57,7 @@ function getConnections(index) {
 				var count = Math.min(response.stationboard.length, 8);
 				var hashtable = {};
 				hashtable[0] = count;
-				for (i = 0; i < count; i++) {
+				for (var i = 0; i < count; i++) {
 					var name = response.stationboard[i].name;
 					var time = response.stationboard[i].stop.departure.substring(11, 16);
 					var destination = response.stationboard[i].to;
@@ -68,7 +67,7 @@ function getConnections(index) {
 				Pebble.sendAppMessage(hashtable);	
 			}
 		}
-	}
+	};
 	req.send(null);	
 }
 
@@ -108,13 +107,13 @@ function getConnectionDetail(index) {
 	hashtable[0] = icon;
 	
 	var p = connection.stop.platform;
-	if (p == "") {
-		p = "?"
+	if (p === "") {
+		p = "?";
 	}
 	hashtable[1] = "Platform: " + p;
 	
 	var d = connection.stop.delay;
-	if (d == null) {
+	if (d === null) {
 		d = "0";	
 	}
 	hashtable[2] = "Delay: " + d;

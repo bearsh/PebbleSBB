@@ -1,57 +1,58 @@
 {
-  "uuid": "506969a2-87f3-4e84-9100-bacaa6f6d237",
-  "shortName": "PebbleSBB",
-  "longName": "PebbleSBB",
-  "companyName": "Dylan Marriott",
-  "capabilities": [
-    "location"
-  ],
-  "versionCode": 1,
-  "versionLabel": "1.0",
-  "watchapp": {
-    "watchface": false
-  },
-  "appKeys": {
-    "dummy": 0
-  },
-  "resources": {
-    "media": [
-      {
-        "type": "png",
-        "name": "IMAGE_ICON",
-        "file": "img/icon.png",
-        "menuIcon": true
-      },
-      {
-        "type": "png",
-        "name": "IMAGE_BUS",
-        "file": "img/bus.png"
-      },
-      {
-        "type": "png",
-        "name": "IMAGE_CABLE",
-        "file": "img/cable.png"
-      },
-      {
-        "type": "png",
-        "name": "IMAGE_SHIP",
-        "file": "img/ship.png"
-      },
-      {
-        "type": "png",
-        "name": "IMAGE_TRAIN",
-        "file": "img/train.png"
-      },
-      {
-        "type": "png",
-        "name": "IMAGE_TRAM",
-        "file": "img/tram.png"
-      }
-    ]
-  },
-  "targetPlatforms": [
-    "aplite",
-    "basalt"
-  ],
-  "sdkVersion": "3"
+    "appKeys": {
+        "dummy": 0
+    },
+    "capabilities": [
+        "location"
+    ],
+    "companyName": "Dylan Marriott",
+    "longName": "PebbleSBB",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/tram.png",
+                "name": "IMAGE_TRAM",
+                "type": "png"
+            },
+            {
+                "file": "images/train.png",
+                "name": "IMAGE_TRAIN",
+                "type": "png"
+            },
+            {
+                "file": "images/ship.png",
+                "name": "IMAGE_SHIP",
+                "type": "png"
+            },
+            {
+                "file": "images/cable.png",
+                "name": "IMAGE_CABLE",
+                "type": "png"
+            },
+            {
+                "file": "images/bus.png",
+                "name": "IMAGE_BUS",
+                "type": "png"
+            },
+            {
+                "file": "images/icon.png",
+                "menuIcon": true,
+                "name": "IMAGE_ICON",
+                "type": "png"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "PebbleSBB",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
+    "uuid": "506969a2-87f3-4e84-9100-bacaa6f6d237",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
 }
